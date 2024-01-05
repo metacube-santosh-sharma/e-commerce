@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import Faq from './components/Faq';
+import About from './components/About';
+import { ToastContainer } from 'react-toastify';
+import store from './store/store';
+import { Provider } from 'react-redux'
+import Cart from './components/Cart';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Provider store={store}>
+        <ToastContainer hideProgressBar={true}  closeOnClick pauseOnHover/>
+        <Router>
+          <Routes>
+            <Route path='/' element={< Login />}></Route>
+            <Route path='/home' element={< Home />}></Route>
+            <Route path='/about' element={< About />}></Route>
+            <Route path='/faq' element={< Faq />}></Route>
+            <Route path='/contact' element={< Contact />}></Route>
+            <Route path='/cart' element={< Cart />}></Route>
+          </Routes>
+        </Router>
+      </Provider>
+    </>
   );
 }
 

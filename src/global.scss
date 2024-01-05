@@ -1,0 +1,51 @@
+.carousel .slide img {
+    height: 600px;
+    object-fit: cover;
+}
+.cart-icon {
+    margin-right: 15px;
+}
+.badge {
+    position: absolute;
+    top: 0px;
+    right: 24px;
+    background: #0d6efd;
+    width: 24px;
+    height: 24px;
+    border-radius: 50% !important;
+    text-align: center;
+    padding: 5px;
+}
+.right-icons svg{
+    vertical-align: unset;
+}
+.ec-banner {
+    img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    }
+    h1 {
+        position: absolute;
+        top: 300px;
+        left: 20px;
+        color: #ffff;
+    }
+}
+
+input {
+    height: 45px;
+}
+.form-item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.form-label {
+    font-weight: 600;
+}
+.error {
+    color: red;
+}
+.d-flex {
+    display: flex;
+}
